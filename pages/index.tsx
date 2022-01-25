@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import BackgroundDisplay from "../components/text/backgroundDisplay";
 
 const Home: NextPage = () => {
   return (
@@ -9,22 +11,26 @@ const Home: NextPage = () => {
         <title>Jacob Haugen</title>
         <meta
           name="description"
-          content="The highlights of the coolest projects I've worked on"
+          content="The highlights of the coolest projects I've made."
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <header>{/*  */}</header>
-      <main className="flex flex-col min-h-screen justify-center items-center bg-slate-400">
+      <main className="grid grid-cols-1 justify-center items-center bg-white">
+        <BackgroundDisplay />
         {/* Hero */}
-        <section className="p-6 mx-auto bg-slate-100 rounded-xl shadow-lg flex items-center space-x-4">
-          <h1 className="text-6xl font-bold">
-            Hello, I'm <span className="text-purple-500">Jacob Haugen</span>.
-            <br /> I'm a full-stack developer.
+        <section className="min-h-screen p-6 mx-auto rounded-xl flex items-center space-x-4">
+          <h1 className="text-6xl text-center">
+            <span className="font-display font-light text-8xl leading-normal">
+              Jacob Haugen
+            </span>
+            <br /> Full Stack Web Developer
           </h1>
         </section>
         {/* Background */}
         <section className="bg-slate-100 grid grid-cols-2">
           {/* I want this to be a callout box right here that fills the page,  */}
+          <h2>About Me</h2>
           <h2>Expertise in React, Node.js, and PostgreSQL</h2>
         </section>
         {/* Projects */}
