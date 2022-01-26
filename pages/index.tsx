@@ -17,16 +17,17 @@ const Home: NextPage = () => {
       </Head>
       <header>{/*  */}</header>
       <main className="grid grid-cols-1 justify-center items-center bg-white">
-        <BackgroundDisplay />
+        <p>New Text Test</p>
         {/* Hero */}
         <section className="min-h-screen p-6 mx-auto rounded-xl flex items-center space-x-4">
           <h1 className="text-6xl text-center">
-            <span className="font-display font-light text-8xl leading-normal">
+            <p className="font-display font-light text-8xl mb-4">
               Jacob Haugen
-            </span>
-            <br /> Full Stack Web Developer
+            </p>
+            Full Stack Web Developer
           </h1>
         </section>
+        <BackgroundDisplay />
         {/* Background */}
         <section className="bg-slate-100 grid grid-cols-2">
           {/* I want this to be a callout box right here that fills the page,  */}
