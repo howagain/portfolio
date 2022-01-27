@@ -3,8 +3,19 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import BackgroundDisplay from "../components/text/backgroundDisplay";
+import Lottie from "react-lottie";
+import jacob_haugen from "../public/lottie/jacob_haugen.json";
 
 const Home: NextPage = () => {
+  const lottieOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: jacob_haugen,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+
   return (
     <div>
       <Head>
@@ -21,9 +32,10 @@ const Home: NextPage = () => {
         {/* Hero */}
         <section className="min-h-screen p-6 mx-auto rounded-xl flex items-center space-x-4">
           <h1 className="text-6xl text-center">
-            <p className="font-display font-light text-8xl mb-4">
+            {/* <p className="font-display font-light text-8xl mb-4">
               Jacob Haugen
-            </p>
+            </p> */}
+            <Lottie options={lottieOptions} />
             Full Stack Web Developer
           </h1>
         </section>
