@@ -74,20 +74,20 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-2">
-            <Parallax offset={200}>
+            <Parallax offset={100}>
               <Image
                 src={waterstonePhoneMockup}
                 alt="Waterstone Phone Mockup"
               />
             </Parallax>
-            <Parallax offset={400}>
+            <Parallax offset={200}>
               <Image
                 src={waterstoneDesktopMockup}
                 alt="Waterstone Desktop Mockup"
               />
             </Parallax>
             <div className="col-span-2">
-              <Parallax offset={300}>
+              <Parallax offset={150}>
                 <div className="max-w-[50%] max-h-[50%] mx-auto">
                   <Image
                     src={waterstoneCourseMockup}
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
               />
             </Parallax>
             <div className="col-span-2">
-              <Parallax offset={300}>
+              <Parallax offset={100}>
                 <div className="max-w-[50%] max-h-[50%] mx-auto">
                   <Image
                     src={TBlaptopMockup}
@@ -148,7 +148,7 @@ const Home: NextPage = () => {
                 alt="Transparent Beauty Phone Mockup"
               />
             </Parallax>
-            <Parallax offset={450}>
+            <Parallax offset={150}>
               <Image
                 src={FFidentifiedMockup}
                 alt="Transparent Beauty Tablet Mockup"
@@ -166,7 +166,7 @@ const Home: NextPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-2">
-            <Parallax offset={400}>
+            <Parallax offset={100}>
               <Image
                 src={FCCcalcProjectMockup}
                 alt="FreeCodeCamp Calculator Project Mockup"
