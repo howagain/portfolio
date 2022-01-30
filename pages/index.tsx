@@ -103,8 +103,8 @@ const Home: NextPage = () => {
             <h2 className="text-4xl mb-0">Transparent Beauty</h2>
             <h3>Full Stack Developer • UX Designer</h3>
             <p>
-              Beauty app to help customers of e-commerce store identify harmful
-              ingredients in the products they use.
+              Web app to help customers identify harmful ingredients in the
+              skincare products they use.
             </p>
           </div>
           <div className="grid grid-cols-2">
@@ -136,23 +136,14 @@ const Home: NextPage = () => {
           <div className="p-10 prose prose-slate">
             <h2 className="text-4xl mb-0">FaceFinder</h2>
             <h3>Full Stack Developer</h3>
-            <p>
-              Face annotation web app using CloudinaryAPI and Node.js backend to
-              manage accounts and identify faces in uploaded image.
-            </p>
+            <p>wWb app using AI to identify faces in uploaded image.</p>
           </div>
           <div className="grid grid-cols-2">
             <Parallax offset={200}>
-              <Image
-                src={FFsignInMockup}
-                alt="Transparent Beauty Phone Mockup"
-              />
+              <Image src={FFsignInMockup} alt="FaceFinder Phone Mockup" />
             </Parallax>
             <Parallax offset={150}>
-              <Image
-                src={FFidentifiedMockup}
-                alt="Transparent Beauty Tablet Mockup"
-              />
+              <Image src={FFidentifiedMockup} alt="FaceFinder Tablet Mockup" />
             </Parallax>
           </div>
         </section>
@@ -161,7 +152,7 @@ const Home: NextPage = () => {
             <h2 className="text-4xl mb-0">FreeCodeCamp Projects</h2>
             <h3>Front End Developer</h3>
             <p>
-              Projects completed for the front end developer certification on
+              Projects completed for the front-end developer certification on
               FreeCodeCamp.com
             </p>
           </div>
@@ -178,7 +169,7 @@ const Home: NextPage = () => {
                 alt="FreeCodeCamp Drum Project Mockup"
               />
             </Parallax>
-            <Parallax offset={150}>
+            <Parallax offset={50}>
               <Image
                 src={FCCmarkdownProjectMockup}
                 alt="FreeCodeCamp Markdown Project Mockup"
@@ -193,6 +184,13 @@ const Home: NextPage = () => {
           </div>
         </section>
         {/* Contact */}
+        <section className="bg-white min-h-[60vh] flex flex-col items-center p-4">
+          <BackgroundDisplay>Contact Me</BackgroundDisplay>
+          <p className="prose prose-slate">
+            You can reach me at:{" "}
+            <a href="mailto:jacobdhaugen@gmail.com">jacobdhaugen@gmail.com</a>
+          </p>
+        </section>
       </main>
     </div>
   );
