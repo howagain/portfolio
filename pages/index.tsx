@@ -2,10 +2,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import BackgroundDisplay from "../components/text/backgroundDisplay";
 import Lottie from "react-lottie";
 import jacob_haugen from "../public/lottie/jacob_haugen.json";
 import Parallax from "../components/utility/parallax";
+
+import BackgroundDisplay from "../components/text/BackgroundDisplay";
 
 import waterstoneDesktopMockup from "../public/mockups/waterstone/waterstone-desktop-mockup.png";
 import waterstonePhoneMockup from "../public/mockups/waterstone/waterstone-phone-mockup.png";
@@ -18,11 +19,11 @@ import TBtabletMockup from "../public/mockups/transparent-beauty/tablet-mockup.p
 import FFsignInMockup from "../public/mockups/facefinder/facefinder-signin-mockup.png";
 import FFidentifiedMockup from "../public/mockups/facefinder/facefinder-identfied-mockup.png";
 
-//Import Free Code Camp Mockups
 import FCCdrumProjectMockup from "../public/mockups/freecodecamp/fcc-drum-clock-mockup.png";
 import FCCcalcProjectMockup from "../public/mockups/freecodecamp/fcc-calculator-mockup.png";
 import FCCmarkdownProjectMockup from "../public/mockups/freecodecamp/fcc-markdown-mockup.png";
 import FCCquoteProjectMockup from "../public/mockups/freecodecamp/fcc-quote-mockup.png";
+
 
 const Home: NextPage = () => {
   const lottieOptions = {
