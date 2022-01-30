@@ -1,35 +1,47 @@
-import { useLayoutEffect, useRef, useState } from "react";
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import { ReactChild, useLayoutEffect, useRef, useState } from "react";
+import {
+  motion,
+  useViewportScroll,
+  useTransform,
+  useSpring,
+} from "framer-motion";
 
-type Props = {};
+type Props = {
+  children: ReactChild;
+};
 
-const BackgroundDisplay = (props: Props) => {
+const BackgroundDisplay = ({ children: text }: Props) => {
+  const [elementRight, setElementRight] = useState(0);
   const [elementTop, setElementTop] = useState(0);
+  const [clientHeight, setClientHeight] = useState(0);
   const ref = useRef(null);
   const { scrollY } = useViewportScroll();
 
-  const y = useTransform(scrollY, [elementTop, elementTop + 100], [-100, 0], {
-    clamp: false,
+  const initial = elementTop - clientHeight;
+  const final = elementTop - clientHeight / 2;
+
+  const yRange = useTransform(scrollY, [initial, final], [-elementRight, 0], {
+    clamp: true,
   });
+  const y = useSpring(yRange, { stiffness: 300, damping: 120, mass: 3 });
 
   useLayoutEffect(() => {
     if (!ref || !ref.current) return;
     const element = ref.current as HTMLElement;
     setElementTop(element.offsetTop);
+    setElementRight(element.getBoundingClientRect().right);
+    setClientHeight(window.innerHeight);
   }, [ref]);
 
   return (
-    <div
-      ref={ref}
-      className="min-h-screen flex justify-center items-center bg-slate-200"
-    >
+    <span ref={ref} className="">
       <motion.h2
-        className="w-36 h-36 bg-white rounded flex justify-center items-center"
+        className="text-gray-400 text-6xl whitespace-nowrap font-bold my-0 text-center"
         style={{ x: y }}
       >
-        About Me
+        {text}
       </motion.h2>
-    </div>
+    </span>
   );
 };
 
