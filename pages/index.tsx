@@ -4,7 +4,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Lottie from "react-lottie";
 import jacob_haugen from "../public/lottie/jacob_haugen.json";
-import Parallax from "../components/utility/parallax";
+import Parallax from "../components/utility/Parallax";
+import SideParallax from "../components/utility/SideParallax";
 
 import BackgroundDisplay from "../components/text/BackgroundDisplay";
 
@@ -24,6 +25,15 @@ import FCCcalcProjectMockup from "../public/mockups/freecodecamp/fcc-calculator-
 import FCCmarkdownProjectMockup from "../public/mockups/freecodecamp/fcc-markdown-mockup.png";
 import FCCquoteProjectMockup from "../public/mockups/freecodecamp/fcc-quote-mockup.png";
 
+import REACT_LOGO from "../public/logos/react_logo.svg";
+import FIREBASE_LOGO from "../public/logos/firebase_logo.png";
+import NEXTJS_LOGO from "../public/logos/next-js_logo.png";
+import NODEJS_LOGO from "../public/logos/nodejs_logo.png";
+import POSTGRES_LOGO from "../public/logos/postgresql_logo.png";
+import SUPABASE_LOGO from "../public/logos/supabase_logo.png";
+import TAILWIND_LOGO from "../public/logos/tailwindcss_logo.png";
+import MUI_LOGO from "../public/logos/material-ui_logo.svg";
+import TYPESCRIPT_LOGO from "../public/logos/typescript_logo.svg";
 
 const Home: NextPage = () => {
   const lottieOptions = {
@@ -65,13 +75,39 @@ const Home: NextPage = () => {
         </section>
         {/* Projects */}
         <section className="bg-white grid md:grid-cols-2 min-h-screen min-w-full place-content-center align-items-center">
-          <div className="pl-10 prose prose-slate">
+          <div className="px-10 prose prose-slate">
             <h2 className="text-4xl mb-0">Waterstone</h2>
             <h3>Full Stack Developer • UX Designer</h3>
             <p>
               Web App project to give users power to customize workouts using
               YouTube’s API.
             </p>
+            <SideParallax>
+              <div className="rounded-lg bg-slate-200 p-4 shadow-md">
+                <div className="grid grid-cols-4 gap-4 px-3">
+                  <Image
+                    src={REACT_LOGO}
+                    alt="react logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={MUI_LOGO}
+                    alt="material ui logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={FIREBASE_LOGO}
+                    alt="firebase logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={NODEJS_LOGO}
+                    alt="nodejs logo"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+            </SideParallax>
           </div>
           <div className="grid grid-cols-2">
             <Parallax offset={100}>
@@ -106,6 +142,42 @@ const Home: NextPage = () => {
               Web app to help customers identify harmful ingredients in the
               skincare products they use.
             </p>
+            <SideParallax>
+              <div className="rounded-lg bg-slate-200 p-4 shadow-md">
+                <div className="grid grid-cols-6 gap-4 px-3">
+                  <Image
+                    src={REACT_LOGO}
+                    alt="react logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={TYPESCRIPT_LOGO}
+                    alt="Typescript logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={MUI_LOGO}
+                    alt="material ui logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={SUPABASE_LOGO}
+                    alt="supabase logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={NODEJS_LOGO}
+                    alt="nodejs logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={POSTGRES_LOGO}
+                    alt="postgreSQL logo"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+            </SideParallax>
           </div>
           <div className="grid grid-cols-2">
             <Parallax offset={200}>
@@ -136,7 +208,28 @@ const Home: NextPage = () => {
           <div className="p-10 prose prose-slate">
             <h2 className="text-4xl mb-0">FaceFinder</h2>
             <h3>Full Stack Developer</h3>
-            <p>wWb app using AI to identify faces in uploaded image.</p>
+            <p>Web app to use AI to identify faces in uploaded image.</p>
+            <SideParallax>
+              <div className="rounded-lg bg-slate-200 p-4 shadow-md">
+                <div className="grid grid-cols-3 gap-12 px-12">
+                  <Image
+                    src={REACT_LOGO}
+                    alt="react logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={NODEJS_LOGO}
+                    alt="nodejs logo"
+                    objectFit="contain"
+                  />
+                  <Image
+                    src={POSTGRES_LOGO}
+                    alt="postgreSQL logo"
+                    objectFit="contain"
+                  />
+                </div>
+              </div>
+            </SideParallax>
           </div>
           <div className="grid grid-cols-2">
             <Parallax offset={200}>
@@ -155,6 +248,19 @@ const Home: NextPage = () => {
               Projects completed for the front-end developer certification on
               FreeCodeCamp.com
             </p>
+            <SideParallax>
+              <div className="rounded-lg bg-slate-200 p-4 shadow-md">
+                <div className="grid">
+                  <Image
+                    src={REACT_LOGO}
+                    alt="react logo"
+                    objectFit="contain"
+                    height={50}
+                    width={50}
+                  />
+                </div>
+              </div>
+            </SideParallax>
           </div>
           <div className="grid grid-cols-2">
             <Parallax offset={100}>
@@ -186,7 +292,7 @@ const Home: NextPage = () => {
         {/* Contact */}
         <section className="bg-white min-h-[60vh] flex flex-col items-center p-4">
           <BackgroundDisplay>Contact Me</BackgroundDisplay>
-          <p className="prose prose-slate">
+          <p className="prose prose-slate text-xl mt-4 text-center">
             You can reach me at:{" "}
             <a href="mailto:jacobdhaugen@gmail.com">jacobdhaugen@gmail.com</a>
           </p>
