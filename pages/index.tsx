@@ -294,7 +294,7 @@ const Home: NextPage = () => {
           <BackgroundDisplay>Contact Me</BackgroundDisplay>
           <p className="prose prose-slate text-xl mt-4 text-center">
             You can reach me at:{" "}
-            <a href="mailto:jacobdhaugen@gmail.com">jacobdhaugen@gmail.com</a>
+            <a href="mailto:jacobdhaugen@gmail.com">jacob.d.haugen@gmail.com</a>
           </p>
         </section>
       </main>
