@@ -51,21 +51,21 @@ const Home: NextPage = () => {
         <title>Jacob Haugen</title>
         <meta
           name="description"
-          content="The highlights of the coolest projects I've made."
+          content="Some highlights of the coolest projects I've made."
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <header>{/*  */}</header>
       <main className="grid grid-cols-1 bg-white">
         {/* Hero */}
-        <section className="min-h-screen p-6 mx-auto rounded-xl flex items-center space-x-4">
-          <h1 className="md:text-6xl text-center prose prose-slate">
+        <section className="mx-auto flex min-h-screen items-center space-x-4 rounded-xl p-6">
+          <h1 className="prose prose-slate text-center md:text-6xl">
             <Lottie options={lottieOptions} />
             Full-Stack Web Developer
           </h1>
         </section>
         {/* Background */}
-        <section className="bg-white flex flex-col items-center p-4">
+        <section className="flex flex-col items-center bg-white p-4">
           {/* I want this to be a callout box right here that fills the page,  */}
           <BackgroundDisplay>About Me</BackgroundDisplay>
           <p className="prose prose-slate">
@@ -74,9 +74,9 @@ const Home: NextPage = () => {
           </p>
         </section>
         {/* Projects */}
-        <section className="bg-white grid md:grid-cols-2 min-h-screen min-w-full place-content-center align-items-center">
-          <div className="px-10 prose prose-slate">
-            <h2 className="text-4xl mb-0">Waterstone</h2>
+        <section className="align-items-center grid min-h-screen min-w-full place-content-center bg-white md:grid-cols-2">
+          <div className="prose prose-slate px-10">
+            <h2 className="mb-0 text-4xl">Waterstone</h2>
             <h3>Full Stack Developer • UX Designer</h3>
             <p>
               Web App project to give users power to customize workouts using
@@ -124,7 +124,7 @@ const Home: NextPage = () => {
             </Parallax>
             <div className="col-span-2">
               <Parallax offset={150}>
-                <div className="max-w-[50%] max-h-[50%] mx-auto">
+                <div className="mx-auto max-h-[50%] max-w-[50%]">
                   <Image
                     src={waterstoneCourseMockup}
                     alt="Waterstone Course Mockup"
@@ -134,9 +134,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="bg-white grid md:grid-cols-2 min-h-screen min-w-full place-content-center align-items-center">
-          <div className="p-10 prose prose-slate">
-            <h2 className="text-4xl mb-0">Transparent Beauty</h2>
+        <section className="align-items-center grid min-h-screen min-w-full place-content-center bg-white md:grid-cols-2">
+          <div className="prose prose-slate p-10">
+            <h2 className="mb-0 text-4xl">Transparent Beauty</h2>
             <h3>Full Stack Developer • UX Designer</h3>
             <p>
               Web app to help customers identify harmful ingredients in the
@@ -194,7 +194,7 @@ const Home: NextPage = () => {
             </Parallax>
             <div className="col-span-2">
               <Parallax offset={100}>
-                <div className="max-w-[50%] max-h-[50%] mx-auto">
+                <div className="mx-auto max-h-[50%] max-w-[50%]">
                   <Image
                     src={TBlaptopMockup}
                     alt="Transparent Beauty Laptop Mockup"
@@ -204,9 +204,9 @@ const Home: NextPage = () => {
             </div>
           </div>
         </section>
-        <section className="bg-white grid md:grid-cols-2 min-h-screen min-w-full place-content-center align-items-center">
-          <div className="p-10 prose prose-slate">
-            <h2 className="text-4xl mb-0">FaceFinder</h2>
+        <section className="align-items-center grid min-h-screen min-w-full place-content-center bg-white md:grid-cols-2">
+          <div className="prose prose-slate p-10">
+            <h2 className="mb-0 text-4xl">FaceFinder</h2>
             <h3>Full Stack Developer</h3>
             <p>Web app to use AI to identify faces in uploaded image.</p>
             <SideParallax>
@@ -240,9 +240,9 @@ const Home: NextPage = () => {
             </Parallax>
           </div>
         </section>
-        <section className="bg-white grid md:grid-cols-2 min-h-screen min-w-full place-content-center align-items-center">
-          <div className="p-10 prose prose-slate">
-            <h2 className="text-4xl mb-0">FreeCodeCamp Projects</h2>
+        <section className="align-items-center grid min-h-screen min-w-full place-content-center bg-white md:grid-cols-2">
+          <div className="prose prose-slate p-10">
+            <h2 className="mb-0 text-4xl">FreeCodeCamp Projects</h2>
             <h3>Front End Developer</h3>
             <p>
               Projects completed for the front-end developer certification on
@@ -290,9 +290,9 @@ const Home: NextPage = () => {
           </div>
         </section>
         {/* Contact */}
-        <section className="bg-white min-h-[60vh] flex flex-col items-center p-4">
+        <section className="flex min-h-[60vh] flex-col items-center bg-white p-4">
           <BackgroundDisplay>Contact Me</BackgroundDisplay>
-          <p className="prose prose-slate text-xl mt-4 text-center">
+          <p className="prose prose-slate mt-4 text-center text-xl">
             You can reach me at:{" "}
             <a href="mailto:jacobdhaugen@gmail.com">jacob.d.haugen@gmail.com</a>
           </p>
